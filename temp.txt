@@ -1,0 +1,71 @@
+// var mysql = require('mysql');
+
+// var con = mysql.createConnection({
+//   host: "localhost",
+//   user: "root",
+//   password: "",
+//   database: "dbnumber"
+// });
+
+// con.connect(function(err) {
+//     if (err) throw err;
+//     console.log("Connected!");
+    
+//   });
+
+        // console.log(msg.from);
+        // var sql = "INSERT INTO data (number) VALUES ?";
+        // var value = [msg.from];
+       
+        // con.query(sql, [value], function (err, result) {
+        // if (err) throw err;
+        // console.log("Number of records inserted: " + result.affectedRows);
+        // });
+
+
+        const keyword = msg.body.toLowerCase();
+        const replyMessage = await db.getReply(keyword);
+
+        if(replyMessage){
+                msg.reply(replyMessage);
+        }
+
+
+        // if (msg.body == '!ping') {
+        //     msg.reply('pong');
+        // }else if(msg.body == 'good morning'){
+        //     msg.reply('selamat pagi');
+        // }
+
+
+{
+    "status": true,
+    "response": {
+        "id": {
+            "fromMe": true,
+            "remote": {
+                "server": "g.us",
+                "user": "120363039490898508",
+                "_serialized": "120363039490898508@g.us"
+            },
+            "id": "F36C45ACA243159EBEC1148DA3987418",
+            "_serialized": "true_120363039490898508@g.us_F36C45ACA243159EBEC1148DA3987418"
+        },
+        "ack": 0,
+        "hasMedia": false,
+        "body": "Assalamualaikum",
+        "type": "chat",
+        "timestamp": 1645780536,
+        "from": "6282311984743@c.us",
+        "to": "120363039490898508@g.us",
+        "deviceType": "android",
+        "isForwarded": false,
+        "forwardingScore": 0,
+        "isStarred": false,
+        "fromMe": true,
+        "hasQuotedMsg": false,
+        "vCards": [],
+        "mentionedIds": [],
+        "isGif": false
+    }
+}
